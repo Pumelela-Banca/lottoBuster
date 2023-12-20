@@ -13,16 +13,14 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver import ChromeOptions
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-import threading
 
 
 class CollectNums:
     def __init__(self, url, file):
         self.currentPosition = None
-        chromePath = r'C:\Users\DELL 3550\Documents\chromedriver\102\chromedriver.exe'
         options = ChromeOptions()
         options.headless = True
-        self.driver = webdriver.Chrome(chromePath, options=options)
+        self.driver = webdriver.Chrome()
         self.driver.get(url)
         self.driver.implicitly_wait(10)
         self.file_name = file
@@ -128,14 +126,7 @@ class CollectNums:
             self.flip_page()
 
 
-
-urls = [('https://www.nationallottery.co.za/daily-lotto-history', 'daily'),
-        ('https://www.nationallottery.co.za/powerball-plus-history', 'plus'),
-        ('https://www.nationallottery.co.za/powerball-history', 'power'),
-        ('https://www.nationallottery.co.za/lotto-history', 'lott'),
-        ('https://www.nationallottery.co.za/lotto-plus-1-history', 'lott1'),
-        ('https://www.nationallottery.co.za/lotto-plus-2-history', 'lott2')
-]
+urls = [('https://www.nationallottery.co.za/daily-lotto-history', 'daily'),]
 
 #
 for x, y in urls:
