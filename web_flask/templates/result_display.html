@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wins and Losses Tracker</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+    }
+    h1 {
+      font-size: 5em; /* Adjust font size for large numbers */
+      margin: 20px 0;
+    }
+    .stats {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .stat {
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .stat h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lotto Buster</h1>
+  <h2>Wins and Losses</h2>
+  <div class="stats">
+    <div class="stat">
+      <h2>Wins</h2>
+      <h1><span id="wins">
+        R{{ results.wins }}
+      </span></h1> </div>
+    <div class="stat">
+      <h2>Losses</h2>
+      <h1><span id="losses">
+        R{{ results.plays }}
+      </span></h1> </div>
+  </div>
+  <a href="http://web-01.sephush.tech/LottoBuster/run">
+    <button type="button">Go to simulator</button>
+  </a>
+</body>
+</html>
